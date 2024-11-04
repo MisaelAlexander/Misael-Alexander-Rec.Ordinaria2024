@@ -109,6 +109,8 @@
   <ItemGroup>
     <None Include="Resources\icons8-faculty-35.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="View\Maestros\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
