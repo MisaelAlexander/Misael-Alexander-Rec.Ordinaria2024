@@ -15,6 +15,7 @@ namespace Refuerzo2024.View.Maestros
         public ViewMaestros()
         {
             InitializeComponent();
+
         }
     }
 }
