@@ -49,7 +49,9 @@
     <Compile Include="Controller\Dashboard\ControllerDashboard.cs" />
     <Compile Include="Controller\Estudiantes\ControllerEstudiante.cs" />
     <Compile Include="Model\Conexion\dbContext.cs" />
+    <Compile Include="Model\DAO\DAODocentes.cs" />
     <Compile Include="Model\DAO\DAOEstudiantes.cs" />
+    <Compile Include="Model\DTO\DTODocentes.cs" />
     <Compile Include="Model\DTO\DTOEstudiantes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
