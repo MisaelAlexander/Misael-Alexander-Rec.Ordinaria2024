@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Refuerzo2024.Model.DAO
 {
@@ -37,7 +38,7 @@ namespace Refuerzo2024.Model.DAO
         {
             try
             {
-                string query = "Insert Into Docentes Values @param1,@param2,@param3";
+                string query = "Insert Into Docentes Values (@param1 ,@param2,@param3)";
                 SqlCommand cmdInsert = new SqlCommand(query, con);
                 cmdInsert.Parameters.AddWithValue("param1",NombreDocente);
                 cmdInsert.Parameters.AddWithValue("param2",ApellidoDocente);
@@ -45,8 +46,9 @@ namespace Refuerzo2024.Model.DAO
                 cmdInsert.ExecuteNonQuery();
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+               
                 return false;
             }
             finally
@@ -99,7 +101,7 @@ namespace Refuerzo2024.Model.DAO
         {
             try
             {
-                string query = $"Select*From ViewDocentes Where ID = '%{Valor}%' OR Nombre OR Apellido ";
+                string query = $"Select*From ViewDocentes Where ID Like '%{Valor}%' OR Nombre Like '%{Valor}%' OR Apellido Like '%{Valor}%' OR  DUI Like '%{Valor}%'";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.ExecuteNonQuery();
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
@@ -107,8 +109,9 @@ namespace Refuerzo2024.Model.DAO
                 adp.Fill(ds, "ViewDocentes");
                 return ds;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 return null;
             }
             finally

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Refuerzo2024.Controller.Docentes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,7 @@ namespace Refuerzo2024.View.Maestros
         public ViewMaestros()
         {
             InitializeComponent();
-
+            ControllerDocentes doc = new ControllerDocentes(this);
         }
     }
 }

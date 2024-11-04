@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\Dashboard\ControllerDashboard.cs" />
+    <Compile Include="Controller\Docentes\ControllerDocentes.cs" />
     <Compile Include="Controller\Estudiantes\ControllerEstudiante.cs" />
     <Compile Include="Model\Conexion\dbContext.cs" />
     <Compile Include="Model\DAO\DAODocentes.cs" />
