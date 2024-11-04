@@ -65,6 +65,12 @@
     <Compile Include="View\Estudiantes\ViewEstudiantes.Designer.cs">
       <DependentUpon>ViewEstudiantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Maestros\ViewMaestros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Maestros\ViewMaestros.Designer.cs">
+      <DependentUpon>ViewMaestros.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Estudiantes\ViewEstudiantes.resx">
       <DependentUpon>ViewEstudiantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Maestros\ViewMaestros.resx">
+      <DependentUpon>ViewMaestros.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -109,8 +118,6 @@
   <ItemGroup>
     <None Include="Resources\icons8-faculty-35.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="View\Maestros\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
